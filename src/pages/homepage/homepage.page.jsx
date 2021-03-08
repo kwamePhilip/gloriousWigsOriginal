@@ -1,10 +1,11 @@
 import React from 'react';
+import Directory from '../../compoonents/directory/directory.component';
 
 
 const HomePage = () => (
     <div className='homepage'>
         <div>
-            <h1>testing the beginnig</h1>
+            <Directory/>
 
         </div>
 
