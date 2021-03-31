@@ -20,8 +20,8 @@ class FullLaceWigs extends React.Component{
         return(
           
             <div className='collection-preview'  >
-                {collections.map(({items}) => (items.map(({id, ...otherProps})=>(
-                    <Card key={id} {...otherProps}  />
+                {collections.map(({items}) => (items.map((item)=>(
+                    <Card key={item.id} item={item}  />
 
                 ))
 

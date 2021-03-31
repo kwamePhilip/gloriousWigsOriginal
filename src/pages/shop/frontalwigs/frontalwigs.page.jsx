@@ -21,9 +21,9 @@ class FrontalWigs extends React.Component{
           
                { collections.map(({ items}) =>( 
                        
-                   items.map(({id, ...OtherItemsProps})=>(
+                   items.map(( item)=>(
                        
-                    <Card key={id} {...OtherItemsProps}  />
+                    <Card key={item.id} item={item}  />
 
                    ))
                      
