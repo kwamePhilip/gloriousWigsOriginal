@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+import {createStructuredSelector} from 'reselect';
 import CartIcon from '../cart-icon/cart-icon.component';
 import './header.component.styles.scss';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import {selectCartHidden} from '../../redux/cart/cart.selectors';
 
 
 
@@ -36,11 +38,6 @@ const Header = ({hidden})=>(
     </div>
 );
 
-const mapDispatchToProps = ({cart:{hidden}}) => (
-    {
-        hidden
-
-    }
-)
+const mapDispatchToProps = createStructuredSelector({hidden: selectCartHidden}); 
 
 export default connect(mapDispatchToProps) (Header);

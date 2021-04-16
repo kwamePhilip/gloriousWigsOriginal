@@ -6,6 +6,7 @@ import FrontalWigs from './pages/shop/frontalwigs/frontalwigs.page';
 import FullLaceWigs from './pages/shop/full-lacewigs/full-lacewigs.page';
 import LaceFrontalWigs from './pages/shop/lacefrontalwigs/lacefrontalwigs.page';
 import Header from './compoonents/header/header.component';
+import CheckoutPage from './pages/checkout/checkout.page'
 
 
 
@@ -16,9 +17,10 @@ function App() {
       <Header/>
       <Switch>
       <Route exact path='/' component={HomePage} />
-      <Route path='/frontalWigs' component={FrontalWigs}  />
-      <Route path='/fullLaceWigs' component={FullLaceWigs}  />
-      <Route path='/laceFrontalWigs' component={LaceFrontalWigs} />
+      <Route exact path='/frontalWigs' component={FrontalWigs}  />
+      <Route exact path='/fullLaceWigs' component={FullLaceWigs}  />
+      <Route exact path='/laceFrontalWigs' component={LaceFrontalWigs} />
+      <Route exact path='/checkout' component={CheckoutPage} />
     
 
 
